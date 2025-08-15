@@ -1,0 +1,21 @@
+#spring.data.mongodb.uri=mongodb+srv://singhsonu35206:rQcn164WGQ0C7lnf@sonu.tlgptkv.mongodb.net/?retryWrites=true&w=majority
+#spring.data.mongodb.database=journaldb
+#spring.data.mongodb.auto-index-creation=true
+#
+
+
+spring:
+  data:
+    mongodb:
+      uri:mongodb+srv://singhsonu35206:rQcn164WGQ0C7lnf@sonu.tlgptkv.mongodb.net/?retryWrites=true&w=majority
+      database:journaldb
+      auto-index-creation:true
+
+
+server:
+  port: 8080
+  servlet:
+    context-path: /journal
+
+#mongodb+srv://singhsonu35206:rQcn164WGQ0C7lnf@sonu.tlgptkv.mongodb.net/?retryWrites=true&w=majority&appName=Sonu
+#2H0S6VUJCom0ISTl
