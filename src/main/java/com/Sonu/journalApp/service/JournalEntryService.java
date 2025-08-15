@@ -3,7 +3,9 @@ package com.Sonu.journalApp.service;
 import com.Sonu.journalApp.Entity.JournalEntity;
 import com.Sonu.journalApp.Entity.User;
 import com.Sonu.journalApp.repository.JournalEntryRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
+import org.slf4j.spi.LoggingEventBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,6 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Component
+@Slf4j
 public class JournalEntryService {
 
     @Autowired
@@ -68,8 +71,8 @@ public class JournalEntryService {
             }
         }catch (Exception e )
         {
-            System.out.println(e);
-            throw new RuntimeException("An error occurred while deleting the entry.",e);
+            log.warn("Worning " ,e);
+            throw new RuntimeException("An error occurred while deleting the entry.", e);
         }
         return removed;
     }
